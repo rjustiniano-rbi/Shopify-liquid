@@ -1,0 +1,5 @@
+{% for tag in product.tags %}
+  {% if tag contains 'Category:Accessories' %}
+    <div class="discount-callout">EXTRA 30% OFF SHOES + ACCESSORIES<span>DISCOUNT AUTO-APPLIED AT CHECKOUT</span></div>
+  {% endif %}
+{% endfor %}
