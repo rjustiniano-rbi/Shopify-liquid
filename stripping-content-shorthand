@@ -1,0 +1,9 @@
+So this {%  %} will keep any white space around it.
+
+And this {%- -%} will strip the white space.
+
+The same applies for {{  }} and {{- -}}.
+
+Or to keep it even more simple {{- -}} is the same as {{ }} but with the strip filter applied to it so it becomes {{ | strip }}.
+
+You can consider it as a shorthand method for stripping the content
