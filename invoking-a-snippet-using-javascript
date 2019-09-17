@@ -12,3 +12,14 @@ var content = {{ content | json }};
     } 
   });
 </script>
+
+<div class="findmine-desktop"></div>
+<script>
+$(document).ready(function () {  
+  if (screen.width >= 699) {// Is Desktop
+     {% capture content %}<div class="small--hide">{% include 'findmine', section_id: section_id %}</div>{% endcapture %}
+     var content = {{ content | json }};
+     $('.findmine-desktop').html(content);
+  } 
+});
+</script>
