@@ -2,3 +2,13 @@
 {% capture content %}{% include 'my-snippet' %}{% endcapture %}
 var content = {{ content | json }};
 </script>
+
+<script>
+  $(document).ready(function () {
+    if (window.location.href.indexOf("utm-tag") > -1) {
+      {% capture content %}{% include 'popup-offer' %}{% endcapture %}
+      var content = {{ content | json }};
+      $('.popup-offer .content').html(content);
+    } 
+  });
+</script>
