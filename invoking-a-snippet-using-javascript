@@ -1,0 +1,4 @@
+<script>
+{% capture content %}{% include 'my-snippet' %}{% endcapture %}
+var content = {{ content | json }};
+</script>
