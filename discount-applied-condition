@@ -1,0 +1,5 @@
+{% for discount in discounts %}
+   {% if discount.code = "testcoupon123" %} 
+      You will get a free item!
+   {% endif %}
+{% endfor %}
