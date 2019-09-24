@@ -1,1 +1,21 @@
 {% if customer.tags contains 'gold' %}gold{% endif %}
+
+
+{% if product.tags contains "Gender:Women's" %}
+	<!-- WOMEN SIZE CHART -->
+    <h2>WOMEN'S SIZE CHART</h2>
+    <p><img src="{{ 'Womens_Size_Chart_v2.jpg' | asset_img_url: '800x' }}" alt="WOMEN'S SIZE CHART"></p>
+
+{% elsif product.tags contains "Gender:Men's Big and Tall" %}
+
+	<!-- B+T SIZE CHART -->
+    <h2>MEN'S BIG AND TALL SIZE CHART</h2>
+    <p><img src="{{ 'Callaway_X_Size_Chart.jpg' | asset_img_url: '800x' }}" alt="MEN'S SIZE CHART"></p>
+
+{% else %}
+
+	<!-- MEN SIZE CHART -->
+    <h2>MEN'S SIZE CHART</h2>
+    <p><img src="{{ 'Callaway_X_Size_Chart.jpg' | asset_img_url: '800x' }}" alt="MEN'S SIZE CHART"></p>
+
+{% endif %}
