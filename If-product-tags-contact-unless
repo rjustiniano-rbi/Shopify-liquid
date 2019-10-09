@@ -1,0 +1,5 @@
+{% unless product.tags contains 'apple' %}
+  {% if product.tags contains 'banana' or product.tags contains 'orange' %}
+    Do something
+  {% endif %}
+{% endunless %}
