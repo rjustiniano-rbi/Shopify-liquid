@@ -1,0 +1,22 @@
+<!-- 40% Off with $200+ Purchase -->
+
+{% assign newTotal = cart.total_price %}
+{% for item in cart.items %}
+  {% if item.product.tags contains 'promo-included' %}
+    {% assign itemQuantity = item.quantity %}
+    {% assign cartSubTotal = item.price | times: itemQuantity %}
+  {% endif %}
+{% endfor %}
+
+<div class="cart-discount-progress" style="display:none">
+<p class="title">40% Off with $200+ Purchase</p>
+<div class="progress-bar">
+  <span class="bar">
+    <span class="progress" style="width:{{ cartSubTotal | divided_by: 200 }}%;"></span>
+  </span>
+</div>
+</div>
+
+
+
+<!-- / 40% Off with $200+ Purchase -->
