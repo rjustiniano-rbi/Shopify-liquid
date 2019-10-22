@@ -1,0 +1,7 @@
+{% assign newTotal = cart.total_price %}
+{% for item in cart.items %}
+  {% if item.product.type == 'Gift Card' %}
+    {% assign newTotal = newTotal | minus: item.line_price %}
+  {% endif %}
+{% endfor %}
+Total is now {{ newTotal | money }}
