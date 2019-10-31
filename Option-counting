@@ -1,0 +1,14 @@
+{% capture colour_variant %}
+  {% for variant in product.variants %}
+  {% for option in variant.options %}
+  {% if product.options[forloop.index0] == 'Color' %}somestring,{% endif %}
+  {% endfor %}
+  {% endfor %}
+{% endcapture %}
+
+{% assign colour_variant_split = colour_variant | split: 'somestring,' %}
+{% assign colour_count = colour_variant_split.size | minus:1 %}
+
+{% if colour_count > 1 %}
+We have {{colour_count}} colours
+{% endif %}
